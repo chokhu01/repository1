@@ -818,7 +818,7 @@ while True:
 							result2 = wks.acell(basicSetting[17]).value
 
 							embed = discord.Embed(
-									description= '```' + SearchID + ' 님의 현재까지 총 루팅 금액은 [[' + result2 + ']] 다이아 이며,\n 분배받을 다이아는 [[' + result + ']] 다이야 입니다.```',
+									description= '```' + SearchID + ' 님의 현재까지 총 루팅 금액은 [ ' + result2 + ' ] 다이아 이며,\n분배받을 다이아는 [ ' + result + ' ] 다이야 입니다.```',
 									color=0xff00ff
 									)
 							await msg.channel.send(embed=embed, tts=False)
@@ -1764,7 +1764,7 @@ while True:
 					result2 = wks.acell(basicSetting[17]).value
 
 					embed = discord.Embed(
-							description= '```' + SearchID + ' 님의 현재까지 총 루팅 금액은 [[' + result2 + ']] 다이아 이며,\n 분배받을 다이아는 [[' + result + ']] 다이야 입니다.```',
+							description= '```' + SearchID + ' 님의 현재까지 총 루팅 금액은 [ ' + result2 + ' ] 다이아 이며,\n분배받을 다이아는 [ ' + result + ' ] 다이야 입니다.```',
 							color=0xff00ff
 							)
 					await msg.channel.send(embed=embed, tts=False)

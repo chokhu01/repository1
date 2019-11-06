@@ -818,7 +818,7 @@ while True:
 							result2 = wks.acell(basicSetting[17]).value
 
 							embed = discord.Embed(
-									description= '```' + SearchID + ' 님의 현재까지 총 루팅 금액은 [ ' + result2 + ' ] 다이아 이며,\n분배받을 다이아는 [ ' + result + ' ] 다이야 입니다.```',
+									description= '```' + SearchID + ' 님의 현재까지 총 루팅금액은 [ ' + result2 + ' ] 다이아 이며,\n분배받을 다이아는 [ ' + result + ' ] 다이아 입니다.```',
 									color=0xff00ff
 									)
 							await msg.channel.send(embed=embed, tts=False)
@@ -861,7 +861,7 @@ while True:
 						for i in range(len(Cell_ID)):
 							information += Cell_Date[i] + '  :  ' + str(Cell_Dia[i]) + ' 정산!\n'
 
-						#await client.get_channel(channel).send(SearchID + '님이 분배해야할 다이야는 ' + result + ' 다이야 입니다.', tts=False)
+						#await client.get_channel(channel).send(SearchID + '님이 분배해야할 다이야는 ' + result + ' 다이 입니다.', tts=False)
 						embed = discord.Embed(
 								title = "----- 정 산 금 -----",
 								description= '총 '+ result + ' 다이야',
@@ -1764,7 +1764,7 @@ while True:
 					result2 = wks.acell(basicSetting[17]).value
 
 					embed = discord.Embed(
-							description= '```' + SearchID + ' 님의 현재까지 총 루팅 금액은 [ ' + result2 + ' ] 다이아 이며,\n분배받을 다이아는 [ ' + result + ' ] 다이야 입니다.```',
+							description= '```' + SearchID + ' 님의 현재까지 총 루팅금액은 [ ' + result2 + ' ] 다이아 이며,\n분배받을 다이아는 [ ' + result + ' ] 다이아 입니다.```',
 							color=0xff00ff
 							)
 					await msg.channel.send(embed=embed, tts=False)

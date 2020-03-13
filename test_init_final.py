@@ -214,9 +214,10 @@ def init():
 	basicSetting.append(inputData[12][16:])    #basicSetting[13] : restart 주기
 	basicSetting.append(inputData[15][12:])    #basicSetting[14] : 시트 이름
 	basicSetting.append(inputData[16][12:])    #basicSetting[15] : 입력 셀
-	basicSetting.append(inputData[17][13:])    #basicSetting[16] : 출력 셀
+	basicSetting.append(inputData[17][14:])    #basicSetting[16] : 출력 셀1
 	basicSetting.append(inputData[9][13:])     #basicSetting[17] : 멍삭제횟수
 	basicSetting.append(inputData[5][14:])     #basicSetting[18] : kill채널 ID
+	basicSetting.append(inputData[18][14:])    #basicSetting[19] : 출력 셀2
 
 	############## 보탐봇 명령어 리스트 #####################
 	for i in range(len(command_inputData)):
@@ -2279,7 +2280,7 @@ while True:
 			################ 정산확인 ################ 
 
 			if message.content.startswith(command[12]):
-				if basicSetting[10] !="" and basicSetting[12] !="" and basicSetting[14] !="" and basicSetting[15] !="" and basicSetting[16] !=""  :
+				if basicSetting[10] !="" and basicSetting[12] !="" and basicSetting[14] !="" and basicSetting[15] !="" and basicSetting[16] !="" and basicSetting[19] !=""   :
 					SearchID = hello[len(command[12])+1:]
 					gc = gspread.authorize(credentials)
 					wks = gc.open(basicSetting[12]).worksheet(basicSetting[14])
@@ -2287,9 +2288,11 @@ while True:
 					wks.update_acell(basicSetting[15], SearchID)
 
 					result = wks.acell(basicSetting[16]).value
+					result2 = wks.acell(basicSetting[19]).value
 
 					embed = discord.Embed(
-							description= '```' + SearchID + ' 님이 받을 다이야는 ' + result + ' 다이야 입니다.```',
+							title = "-----"+SearchID+"님 정산내역-----",
+							description= '```fix\n루팅총액 : ' + result2 +' 다이아\n분배금 : ' + result + ' 다이아\n```',
 							color=0xff00ff
 							)
 					await msg.channel.send(embed=embed, tts=False)

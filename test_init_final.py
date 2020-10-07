@@ -2448,13 +2448,13 @@ while True:
 			await ctx.send(f'```올바른 명령어를 입력해주세요.```', tts=False)
 
 	################ ?????????????? ################ 
-	@client.command(name='!오빠')
+	@client.command(name='!돌격')
 	async def brother1_(ctx):
-		await PlaySound(voice_client1, './sound/오빠.mp3')
+		await PlaySound(voice_client1, './sound/돌격.mp3')
 
-	@client.command(name='!언니')
+	@client.command(name='!러쉬')
 	async def sister_(ctx):
-		await PlaySound(voice_client1, './sound/언니.mp3')
+		await PlaySound(voice_client1, './sound/러쉬.mp3')
 
 	@client.command(name='!형')
 	async def brother2_(ctx):
